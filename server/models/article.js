@@ -8,7 +8,8 @@ const articleSchema = new Schema({
     url: String,
     eyebrow: String,
     timePosted: String,
-    image: String
+    image: String,
+    createdby: String
 });
 
 const Article = mongoose.model('Article', articleSchema);

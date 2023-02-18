@@ -20,6 +20,13 @@ const foxnationURL = "https://www.foxnews.com/shows/fox-nation"
 
 
 
+router.get('/', (req, res) => {
+    Article.find({createdBy: "fox"})
+    .then(response => {
+        res.json({response: response})
+    })
+})
+
 router.post('/us', (req, res) => {
     axios(usURL)
         .then(response => {
@@ -51,7 +58,8 @@ router.post('/us', (req, res) => {
                     url: a.url,
                     eyebrow: a.eyebrow,
                     timePosted: a.timePosted,
-                    image: a.image
+                    image: a.image,
+                    createdBy: "fox"
                 })
             })
         res.json(articles)
@@ -90,7 +98,8 @@ router.post('/politics', (req, res) => {
                     url: a.url,
                     eyebrow: a.eyebrow,
                     timePosted: a.timePosted,
-                    image: a.image
+                    image: a.image,
+                    createdBy: "fox"
                 })
             })
         res.json(articles)
@@ -129,7 +138,8 @@ router.post('/media', (req, res) => {
                     url: a.url,
                     eyebrow: a.eyebrow,
                     timePosted: a.timePosted,
-                    image: a.image
+                    image: a.image,
+                    createdBy: "fox"
                 })
             })
         res.json(articles)
@@ -168,7 +178,8 @@ router.post('/opinion', (req, res) => {
                     url: a.url,
                     eyebrow: a.eyebrow,
                     timePosted: a.timePosted,
-                    image: a.image
+                    image: a.image,
+                    createdBy: "fox"
                 })
             })
         res.json(articles)
@@ -207,7 +218,8 @@ router.post('/business', (req, res) => {
                     url: a.url,
                     eyebrow: a.eyebrow,
                     timePosted: a.timePosted,
-                    image: a.image
+                    image: a.image,
+                    createdBy: "fox"
                 })
             })
         res.json(articles)
@@ -246,7 +258,8 @@ router.post('/entertainment', (req, res) => {
                     url: a.url,
                     eyebrow: a.eyebrow,
                     timePosted: a.timePosted,
-                    image: a.image
+                    image: a.image,
+                    createdBy: "fox"
                 })
             })
         res.json(articles)
@@ -285,7 +298,8 @@ router.post('/sports', (req, res) => {
                     url: a.url,
                     eyebrow: a.eyebrow,
                     timePosted: a.timePosted,
-                    image: a.image
+                    image: a.image,
+                    createdBy: "fox"
                 })
             })
         res.json(articles)
@@ -324,7 +338,8 @@ router.post('/lifestyle', (req, res) => {
                     url: a.url,
                     eyebrow: a.eyebrow,
                     timePosted: a.timePosted,
-                    image: a.image
+                    image: a.image,
+                    createdBy: "fox"
                 })
             })
         res.json(articles)
@@ -363,7 +378,8 @@ router.post('/tv', (req, res) => {
                     url: a.url,
                     eyebrow: a.eyebrow,
                     timePosted: a.timePosted,
-                    image: a.image
+                    image: a.image,
+                    createdBy: "fox"
                 })
             })
         res.json(articles)
@@ -402,7 +418,8 @@ router.post('/foxnation', (req, res) => {
                     url: a.url,
                     eyebrow: a.eyebrow,
                     timePosted: a.timePosted,
-                    image: a.image
+                    image: a.image,
+                    createdBy: "fox"
                 })
             })
         res.json(articles)

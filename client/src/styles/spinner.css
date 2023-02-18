@@ -1,0 +1,41 @@
+#logos-container{
+    animation:  30s linear 0s infinite icons;
+}
+
+@keyframes icons {
+    0% { 
+    transform: none;
+} 
+
+10% {
+   transform: translateX(-20%);
+} 
+20% {
+   transform: translateX(-40%);
+}
+30% {
+   transform: translateX(-60%);
+} 
+40% {
+   transform: translateX(-80%)
+}
+50% {
+   transform: translateX(-100%)
+}
+60% {
+   transform: translateX(-120%)
+}
+70% {
+   transform: translateX(-140%)
+}
+80% {
+   transform: translateX(-160%)
+}
+90% {
+   transform: translateX(-180%)
+}
+100% {
+   transform: translateX(-200%)
+}
+
+}
