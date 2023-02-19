@@ -5,10 +5,10 @@ import cnn from '../assets/cnn.png'
 
 
 const Cnn = () => {
-  const {data, setData} = useContext(DataContext)
-  useEffect(() => {
-    console.log('this is the context', data)
-  }, [data])
+  // const {data, setData} = useContext(DataContext)
+  // useEffect(() => {
+  //   console.log('this is the context', data)
+  // }, [data])
   
 
 
@@ -19,7 +19,7 @@ const Cnn = () => {
       
       </div>
       <div className='flex gap-8 flex-wrap ml-2 mt-2'>
-     {data?.map((d) => <NewsCard article={d.article} createdby={d.createdBy} eyebrow={d.eyebrow} image={d.image} timePosted={d.timePosted} title={d.title} url={d.url}/>)}
+     {/* {data?.map((d) => <NewsCard article={d.article} createdby={d.createdBy} eyebrow={d.eyebrow} image={d.image} timePosted={d.timePosted} title={d.title} url={d.url}/>)} */}
       </div>
   
   

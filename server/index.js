@@ -3,6 +3,7 @@ const express = require('express')
 require('dotenv').config()
 const app = express()
 const cors = require('cors')
+const Article = require('./models/article')
 const mongoose = require('mongoose');
 
 
@@ -28,6 +29,7 @@ app.use(express.json());
 app.use("/fox", require('./controllers/fox'))
 
 app.get('/', function (req, res) {
+
     res.json('This is my webscraper')
 })
 

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Home, Fox, Cnn, Tg, Abc, Nyt, Times, Vox } from './pages'
-import NewsCard from './components/NewsCard'
+import Pagination from './components/Pagination'
 
 import './styles/App.css'
 import Navbar from './components/Navbar'
@@ -10,14 +10,14 @@ export const DataContext = React.createContext();
 
 
 function App() {
-  const [data, setData] = useState([])
+  const [foxData, setFoxData] = useState([])
   
   
 useEffect(() => {
-  axios.post(`http://localhost:8000/fox/us`)
+  axios.get(`http://localhost:8000/fox`)
   .then(response => {
-    setData(response.data)
-    console.log('this is in the eu', response.data)
+    setFoxData(response.data.response)
+    console.log('this is in the eu', response.data.response)
   })
   
 }, [])
@@ -27,7 +27,7 @@ useEffect(() => {
   return (
 
   <BrowserRouter>
-    <DataContext.Provider value={{data, setData}}>
+    <DataContext.Provider value={{foxData, setFoxData}}>
       <Navbar/>
         <Routes>
           <Route path="/" element={<Home/>}></Route>
@@ -38,7 +38,7 @@ useEffect(() => {
           <Route path="/nyt" element={<Nyt/>}></Route>
           <Route path="/times" element={<Times/>}></Route>
           <Route path="/vox" element={<Vox/>}></Route>
-          <Route path="/test" element={<NewsCard/>}></Route>
+          <Route path="/test" element={<Pagination/>}></Route>
         </Routes>
     </DataContext.Provider> 
   </BrowserRouter>
