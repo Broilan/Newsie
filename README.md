@@ -2,6 +2,8 @@ TECHNOLOGIES
 ----------------
 - React
 - MongoDB/Mongoose
+- ExpressJS
+- NodeJS
 - JSX/JS
 - Cheerio
 - TailwindCSS
