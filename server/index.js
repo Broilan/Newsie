@@ -2,6 +2,7 @@ const PORT = 8000
 const express = require('express')
 require('dotenv').config()
 const app = express()
+const axios = require('axios')
 const cors = require('cors')
 const Article = require('./models/article')
 const mongoose = require('mongoose');
@@ -28,10 +29,28 @@ app.use(express.json());
 
 app.use("/fox", require('./controllers/fox'))
 
-app.get('/', function (req, res) {
 
-    res.json('This is my webscraper')
+app.get('/', function (req, res) {
+    Article.find({})
+    .then(allArticles => {
+       res.json({allArticles: allArticles })  
+    })
+   
 })
+
+//Fox intervals
+    setInterval( async () => {
+     await axios.post(`http://localhost:8000/fox/us`)
+     await axios.post(`http://localhost:8000/fox/politics`)
+     await axios.post(`http://localhost:8000/fox/media`)
+     await axios.post(`http://localhost:8000/fox/opinion`)
+     await axios.post(`http://localhost:8000/fox/business`)
+     await axios.post(`http://localhost:8000/fox/entertainment`)
+     await axios.post(`http://localhost:8000/fox/sports`)
+     await axios.post(`http://localhost:8000/fox/lifestyle`)
+     await axios.post(`http://localhost:8000/fox/tv`)
+     await axios.post(`http://localhost:8000/fox/foxnation`)
+  }, 1800000);
 
 
 

@@ -10,7 +10,7 @@ const Fox = () => {
   const [currentRender, setCurrentRender] = useState([])
   
   useEffect(() => {
-    setCurrentRender(foxData.reverse().slice(0, postsPerPage))
+    setCurrentRender(foxData.slice(0, postsPerPage))
 
     window.addEventListener('scroll', (e) =>{
       const yAxis = e.target.documentElement.scrollTop
@@ -31,10 +31,9 @@ const Fox = () => {
     <div className='bg-dimWhite'>
       <div id="foxheader" className='flex text-center justify-center h-[25vh] w-full bg-secondary text-[5rem]'> 
        <img src={fox} className='h-[45vh] mt-[-2rem] w-[40rem] '></img>
-      
       </div>
-      <div className='flex gap-8 flex-wrap ml-2 mt-2'>
-     {currentRender?.map((d) => <NewsCard article={d.article} createdby={d.createdBy} eyebrow={d.eyebrow} image={d.image} timePosted={d.timePosted} title={d.title} url={d.url}/>)}
+      <div className='flex gap-[5rem] ml-[4rem] flex-wrap mt-4'>
+     {currentRender?.map((d) => <NewsCard article={d.article} dateNow={d.dateNow} date={d.date} createdby={d.createdby} eyebrow={d.eyebrow} image={d.image} timePosted={d.timePosted} title={d.title} url={d.url}/>)}
       </div>
   
   

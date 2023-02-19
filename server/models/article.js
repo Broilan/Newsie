@@ -9,7 +9,21 @@ const articleSchema = new Schema({
     eyebrow: String,
     timePosted: String,
     image: String,
-    createdby: String
+    createdby: String,
+    date: {type: String, 
+        default: new Date().toLocaleString('en-us', {
+            timeStyle:'short'}) + " " +
+            new Date().toLocaleString('en-us', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+            weekday: 'long'
+            })
+    },
+    dateNow: {
+        type: Date,
+        default: Date.now()
+    }
 });
 
 const Article = mongoose.model('Article', articleSchema);
