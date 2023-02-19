@@ -22,3 +22,6 @@ const cheerio = require('cheerio')
  
  const techURL = "https://www.cnn.com/business/tech"
  const successURL = "https://www.cnn.com/business/success"
+
+ module.exports = router;
+

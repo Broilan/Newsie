@@ -28,6 +28,12 @@ app.use(express.json());
 
 
 app.use("/fox", require('./controllers/fox'))
+app.use("/cnn", require('./controllers/cnn'))
+app.use("/nyt", require('./controllers/nyt'))
+app.use("/tg", require('./controllers/tg'))
+app.use("/times", require('./controllers/times'))
+app.use("/vox", require('./controllers/vox'))
+app.use("/abc", require('./controllers/abc'))
 
 
 app.get('/', function (req, res) {
