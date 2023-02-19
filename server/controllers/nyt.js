@@ -5,15 +5,207 @@ const Article = require('../models/article')
 const cheerio = require('cheerio')
 
  const usURL = "https://www.nytimes.com/section/us"
- const opinionURL = "https://www.nytimes.com/section/opinion"
- const businessURL = "https://www.nytimes.com/section/business"
-
- const sportsURL = "https://www.nytimes.com/section/sports"
  const scienceURL = "https://www.nytimes.com/section/science"
  const politicsURL = "https://www.nytimes.com/section/politics"
  const travelURL = "https://www.nytimes.com/section/travel"
  const booksURL = "https://www.nytimes.com/section/books"
- const healthURL = "https://www.nytimes.com/section/health"
+
+ router.get('/', (req, res) => {
+    Article.find({createdby: "NY Times"})
+    .then(response => {
+        res.json({response: response})
+    })
+})
+
+ router.post('/us', (req, res) => {
+    axios(usURL)
+        .then(response => {
+            const html = response.data
+            const $ = cheerio.load(html)
+            const articles = []
+
+            $('li', html).each(function () { //<-- cannot be a function expression
+                const image = $(this).find('a').find('img').attr("src")
+                const url = `https://www.nytimes.com${$(this).find("a").attr('href')}`
+                const title = $(this).find("a").find('h2').text()
+                const article = $(this).find("a").find('p').text()
+                articles.push({
+                    title,
+                    url,
+                    image,
+                    article
+                })
+                
+            })
+            articles.map((a) => {
+                Article.create({
+                    title: a.title,
+                    article: a.article,
+                    url: a.url,
+                    image: a.image,
+                    eyebrow: "US",
+                    createdby: "NY Times",
+                })
+                .then(response => {
+                    console.log(response)
+                })
+            })
+        res.json(articles)
+        }).catch(err => console.log(err))
+
+})
+
+router.post('/science', (req, res) => {
+    axios(scienceURL)
+        .then(response => {
+            const html = response.data
+            const $ = cheerio.load(html)
+            const articles = []
+
+            $('li', html).each(function () { //<-- cannot be a function expression
+                const image = $(this).find('a').find('img').attr("src")
+                const url = `https://www.nytimes.com${$(this).find("a").attr('href')}`
+                const title = $(this).find("a").find('h2').text()
+                const article = $(this).find("a").find('p').text()
+                articles.push({
+                    title,
+                    url,
+                    image,
+                    article
+                })
+                
+            })
+            articles.map((a) => {
+                Article.create({
+                    title: a.title,
+                    article: a.article,
+                    url: a.url,
+                    image: a.image,
+                    eyebrow: "science",
+                    createdby: "NY Times",
+                })
+                .then(response => {
+                    console.log(response)
+                })
+            })
+        res.json(articles)
+        }).catch(err => console.log(err))
+
+})
+
+router.post('/politics', (req, res) => {
+    axios(politicsURL)
+        .then(response => {
+            const html = response.data
+            const $ = cheerio.load(html)
+            const articles = []
+
+            $('li', html).each(function () { //<-- cannot be a function expression
+                const image = $(this).find('a').find('img').attr("src")
+                const url = `https://www.nytimes.com${$(this).find("a").attr('href')}`
+                const title = $(this).find("a").find('h2').text()
+                const article = $(this).find("a").find('p').text()
+                articles.push({
+                    title,
+                    url,
+                    image,
+                    article
+                })
+                
+            })
+            articles.map((a) => {
+                Article.create({
+                    title: a.title,
+                    article: a.article,
+                    url: a.url,
+                    image: a.image,
+                    eyebrow: "Politics",
+                    createdby: "NY Times",
+                })
+                .then(response => {
+                    console.log(response)
+                })
+            })
+        res.json(articles)
+        }).catch(err => console.log(err))
+
+})
+
+router.post('/travel', (req, res) => {
+    axios(travelURL)
+        .then(response => {
+            const html = response.data
+            const $ = cheerio.load(html)
+            const articles = []
+
+            $('li', html).each(function () { //<-- cannot be a function expression
+                const image = $(this).find('a').find('img').attr("src")
+                const url = `https://www.nytimes.com${$(this).find("a").attr('href')}`
+                const title = $(this).find("a").find('h2').text()
+                const article = $(this).find("a").find('p').text()
+                articles.push({
+                    title,
+                    url,
+                    image,
+                    article
+                })
+                
+            })
+            articles.map((a) => {
+                Article.create({
+                    title: a.title,
+                    article: a.article,
+                    url: a.url,
+                    image: a.image,
+                    eyebrow: "Travel",
+                    createdby: "NY Times",
+                })
+                .then(response => {
+                    console.log(response)
+                })
+            })
+        res.json(articles)
+        }).catch(err => console.log(err))
+
+})
+
+router.post('/books', (req, res) => {
+    axios(booksURL)
+        .then(response => {
+            const html = response.data
+            const $ = cheerio.load(html)
+            const articles = []
+
+            $('li', html).each(function () { //<-- cannot be a function expression
+                const image = $(this).find('a').find('img').attr("src")
+                const url = `https://www.nytimes.com${$(this).find("a").attr('href')}`
+                const title = $(this).find("a").find('h2').text()
+                const article = $(this).find("a").find('p').text()
+                articles.push({
+                    title,
+                    url,
+                    image,
+                    article
+                })
+                
+            })
+            articles.map((a) => {
+                Article.create({
+                    title: a.title,
+                    article: a.article,
+                    url: a.url,
+                    image: a.image,
+                    eyebrow: "Books",
+                    createdby: "NY Times",
+                })
+                .then(response => {
+                    console.log(response)
+                })
+            })
+        res.json(articles)
+        }).catch(err => console.log(err))
+
+})
 
 
  module.exports = router;

@@ -20,7 +20,7 @@ const foxnationURL = "https://www.foxnews.com/shows/fox-nation"
 
 
 router.get('/', (req, res) => {
-    Article.find({createdBy: "Fox News"})
+    Article.find({createdby: "Fox News"})
     .then(response => {
         res.json({response: response})
     })
@@ -59,7 +59,7 @@ router.post('/us', (req, res) => {
                     eyebrow: a.eyebrow,
                     timePosted: a.timePosted,
                     image: a.image,
-                    createdby: "Fox News",
+                    createdby: "Fox",
                 })
                 .then(response => {
                     console.log(response)
@@ -102,7 +102,7 @@ router.post('/politics', (req, res) => {
                     eyebrow: a.eyebrow,
                     timePosted: a.timePosted,
                     image: a.image,
-                    createdBy: "Fox News"
+                    createdby: "Fox"
                 })
             })
         res.json(articles)
@@ -142,7 +142,7 @@ router.post('/media', (req, res) => {
                     eyebrow: a.eyebrow,
                     timePosted: a.timePosted,
                     image: a.image,
-                    createdBy: "Fox News"
+                    createdby: "Fox"
                 })
             })
         res.json(articles)
@@ -182,7 +182,7 @@ router.post('/opinion', (req, res) => {
                     eyebrow: a.eyebrow,
                     timePosted: a.timePosted,
                     image: a.image,
-                    createdBy: "Fox News"
+                    createdby: "Fox"
                 })
             })
         res.json(articles)
@@ -222,7 +222,7 @@ router.post('/business', (req, res) => {
                     eyebrow: a.eyebrow,
                     timePosted: a.timePosted,
                     image: a.image,
-                    createdBy: "Fox News"
+                    createdby: "Fox"
                 })
             })
         res.json(articles)
@@ -262,7 +262,7 @@ router.post('/entertainment', (req, res) => {
                     eyebrow: a.eyebrow,
                     timePosted: a.timePosted,
                     image: a.image,
-                    createdBy: "Fox News"
+                    createdby: "Fox"
                 })
             })
         res.json(articles)
@@ -284,7 +284,6 @@ router.post('/sports', (req, res) => {
                 const timePosted = $(this).find('.time').text()
                 const url = `https://www.foxnews.com${$(this).find('a').attr('href')}`
                 const image = $(this).find('img').attr('src')
-                const createdBy = "Fox News"
                 articles.push({
                     title,
                     article,
@@ -292,7 +291,6 @@ router.post('/sports', (req, res) => {
                     eyebrow,
                     timePosted,
                     image,
-                    createdBy
                 })
                 
             })
@@ -304,7 +302,7 @@ router.post('/sports', (req, res) => {
                     eyebrow: a.eyebrow,
                     timePosted: a.timePosted,
                     image: a.image,
-                    createdBy: "Fox News"
+                    createdby: "Fox"
                 })
             })
         res.json(articles)
@@ -326,15 +324,13 @@ router.post('/lifestyle', (req, res) => {
                 const timePosted = $(this).find('.time').text()
                 const url = `https://www.foxnews.com${$(this).find('a').attr('href')}`
                 const image = $(this).find('img').attr('src')
-                const createdBy = "Fox News"
                 articles.push({
                     title,
                     article,
                     url,
                     eyebrow,
                     timePosted,
-                    image,
-                    createdBy
+                    image
                 })
                 
             })
@@ -346,7 +342,7 @@ router.post('/lifestyle', (req, res) => {
                     eyebrow: a.eyebrow,
                     timePosted: a.timePosted,
                     image: a.image,
-                    createdBy: "Fox News"
+                    createdby: "Fox"
                 })
             })
         res.json(articles)
@@ -368,7 +364,6 @@ router.post('/tv', (req, res) => {
                 const timePosted = $(this).find('.time').text()
                 const url = `https://www.foxnews.com${$(this).find('a').attr('href')}`
                 const image = $(this).find('img').attr('src')
-                const createdBy = "Fox News"
                 articles.push({
                     title,
                     article,
@@ -376,7 +371,6 @@ router.post('/tv', (req, res) => {
                     eyebrow,
                     timePosted,
                     image,
-                    createdBy
                 })
                 
             })
@@ -388,7 +382,7 @@ router.post('/tv', (req, res) => {
                     eyebrow: a.eyebrow,
                     timePosted: a.timePosted,
                     image: a.image,
-                    createdBy: "Fox News"
+                    createdby: "Fox"
                 })
             })
         res.json(articles)
@@ -428,7 +422,7 @@ router.post('/foxnation', (req, res) => {
                     eyebrow: a.eyebrow,
                     timePosted: a.timePosted,
                     image: a.image,
-                    createdBy: "Fox News"
+                    createdby: "Fox"
                 })
             })
         res.json(articles)

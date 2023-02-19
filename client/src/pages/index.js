@@ -1,7 +1,6 @@
 export {default as Home} from './Home'
 export {default as Fox} from './Fox'
 export {default as Tg} from './Tg'
-export {default as Abc} from './Abc'
 export {default as Nyt} from './Nyt'
 export {default as Cnn} from './Cnn'
 export {default as Times} from './Times'

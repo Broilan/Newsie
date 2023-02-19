@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { Home, Fox, Cnn, Tg, Abc, Nyt, Times, Vox } from './pages'
+import { Home, Fox, Cnn, Tg, Nyt, Times, Vox } from './pages'
 
 import './styles/App.css'
 import Navbar from './components/Navbar'
