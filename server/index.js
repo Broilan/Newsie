@@ -1,4 +1,3 @@
-const PORT = 8000
 const express = require('express')
 require('dotenv').config()
 const app = express()
@@ -96,6 +95,6 @@ app.get('/', function (req, res) {
 
 
 
-const server = app.listen(PORT, () => console.log(`server running on PORT ${PORT}`))
+const server = app.listen(PORT || 8000, () => console.log(`server running on PORT ${PORT}`))
 
 module.exports = server;
