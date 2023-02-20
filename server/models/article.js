@@ -11,8 +11,7 @@ const articleSchema = new Schema({
     image: String,
     createdby: String,
     date: {type: String, 
-        default: new Date().toLocaleString('en-us', {
-            timeStyle:'short'}) + " " +
+        default: 
             new Date().toLocaleString('en-us', {
             year: 'numeric',
             month: 'short',
