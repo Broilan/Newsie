@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    background: hsl(0, 0%, 18%);
+
+}
+
+#card {
+box-shadow: 0 0 4px;
+
+}

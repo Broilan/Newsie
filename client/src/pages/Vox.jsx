@@ -29,8 +29,8 @@ const Vox = () => {
 
 
   return (
-    <div className='bg-dimWhite'>
-      <div id="foxheader" className='flex text-center justify-center h-[25vh] w-full bg-secondary text-[5rem]'> 
+    <div>
+      <div id="foxheader" className='flex text-center justify-center h-[25vh] w-full bg-dimWhite text-[5rem]'> 
        <img src={vox} className='h-[45vh] mt-[-4rem] w-[40rem] '></img>
       </div>
       <div className='flex gap-[5rem] ml-[4rem] flex-wrap mt-4'>

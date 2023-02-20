@@ -17,9 +17,9 @@ import '../styles/spinner.css'
 
 const Spinner = () => {
     return (
-        <div className="bg-secondary py-24 sm:py-32">
+        <div className="bg-dimWhite py-20">
           <div className="mx-auto px-6 lg:px-8">
-            <h1 className="text-center text-lg font-semibold leading-8 text-gray-900">
+            <h1 className="text-center text-lg font-bold leading-8 text-gray-900">
               Collection of ALL the news.
             </h1>
             <h3 className="text-center text-lg font-semibold leading-8 text-gray-900">

@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import newsie from '../assets/newsieexclblk.png'
+import '../styles/App.css'
+
 
 
 function NewsCard(props) {
@@ -38,11 +40,11 @@ function NewsCard(props) {
     // dateConvert()
 
   return (
-    <div className=' bg-primary w-fit h-fit left-[25%] top-[25%] border-[2px] border-black rounded-[5px]'>
+    <div id="card" className=' w-fit h-fit left-[25%] top-[25%] border-[2px] border-dimWhite rounded-[5px] text-dimWhite'>
        
-        <div className='w-[24rem] h-[30rem] bg-dimWhite shadow-2x1 border-none rounded-[5px] p-2'>
+        <div className='w-[24rem] h-[30rem] shadow-2x1 border-none rounded-[5px] p-2'>
 
-           { image?  <img src={image} className="w-[100%]  h-48 border-[2px] border-black " /> : <img src={newsie} className="w-[100%]  h-48 border-[2px] border-black " />}
+           { image?  <img src={image} className="w-[100%]  h-48 border-[2px] border-dimWhite " /> : <img src={newsie} className="w-[100%]  h-48 border-[2px] border-dimWhite " />}
             <ul className='flex flex-row gap-20'>
             <li className='font-bold'>{createdby}</li>
             <li className='font-semibold'>{calcDate}</li>
@@ -50,7 +52,7 @@ function NewsCard(props) {
             </ul>
             <div className='flex'>
             <h1 className='font-bold my-5'>{title}</h1>
-            <a href={url} target="_blank" className='flex border-2 ml-auto border-black justify-center mt-4 text-center p-1 pr-2 pt-1.5 rounded-[10px] h-10 w-20 bg-dimWhite text-primary font-semibold'> View </a>
+            <a href={url} target="_blank" className='flex border-2 ml-auto border-dimWhite justify-center mt-4 text-center p-1 pr-2 pt-1.5 rounded-[10px] h-10 w-20 bg-primary text-dimWhite font-bold'> View </a>
             </div>
             <h3 className='font-semibold'>{article}</h3>
 

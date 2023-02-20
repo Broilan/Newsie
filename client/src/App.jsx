@@ -67,7 +67,6 @@ useEffect(() => {
           <Route path="/nyt" element={<Nyt/>}></Route>
           <Route path="/times" element={<Times/>}></Route>
           <Route path="/vox" element={<Vox/>}></Route>
-          {/* <Route path="/test" element={<Pagination/>}></Route> */}
         </Routes>
     </DataContext.Provider> 
   </BrowserRouter>
