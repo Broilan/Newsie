@@ -19,10 +19,7 @@ function App() {
   
 
 useEffect(() => {
-  axios.get(`https://newsie.herokuapp.com/fox`)
-  .then(response => {
-    setFoxData(response.data.response.reverse())
-  })
+
   axios.get(`https://newsie.herokuapp.com/cnn`)
   .then(response => {
     setCnnData(response.data.response.reverse())
@@ -42,6 +39,10 @@ useEffect(() => {
   axios.get(`https://newsie.herokuapp.com/vox`)
   .then(response => {
     setVoxData(response.data.response.reverse())
+  })
+  axios.get(`https://newsie.herokuapp.com/fox`)
+  .then(response => {
+    setFoxData(response.data.response.reverse())
   })
 }, [])
 
