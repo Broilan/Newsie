@@ -12,6 +12,8 @@ const MONGO_CONNECTION_STRING = process.env.MONGO_CONNECTION_STRING;
 mongoose.connect(MONGO_CONNECTION_STRING, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 
+const PORT = process.env.PORT || 8000;
+
 db.once('open', () => {
     console.log(`Connected to MongoDB at HOST: ${db.host} and PORT: ${db.port}`);
 });
@@ -33,7 +35,11 @@ app.use("/tg", require('./controllers/tg'))
 app.use("/times", require('./controllers/times'))
 app.use("/vox", require('./controllers/vox'))
 
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
+    res.json({ name: 'MERN Auth API', greeting: 'Welcome to the our API', author: 'YOU', message: "Smile, you are being watched by the Backend Engineering Team" });
+  });
+
+app.get('/home', function (req, res) {
     Article.find({})
     .then(allArticles => {
        res.json({allArticles: allArticles })  
@@ -95,6 +101,6 @@ app.get('/', function (req, res) {
 
 
 
-const server = app.listen(process.env.PORT || 8000, () => console.log(`server running on PORT ${PORT}`))
+const server = app.listen(PORT, () => console.log(`server running on PORT ${PORT}`))
 
 module.exports = server;
