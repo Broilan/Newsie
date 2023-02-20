@@ -99,7 +99,6 @@ app.get('/home', function (req, res) {
      await axios.post(`https://newsie.herokuapp.com/fox/politics`)
      await axios.post(`https://newsie.herokuapp.com/fox/media`)
      await axios.post(`https://newsie.herokuapp.com/fox/opinion`)
-     await axios.post(`https://newsie.herokuapp.com/fox/business`)
      await axios.post(`https://newsie.herokuapp.com/fox/entertainment`)
      await axios.post(`https://newsie.herokuapp.com/fox/sports`)
      await axios.post(`https://newsie.herokuapp.com/fox/lifestyle`)
