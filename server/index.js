@@ -95,6 +95,6 @@ app.get('/', function (req, res) {
 
 
 
-const server = app.listen(PORT || 8000, () => console.log(`server running on PORT ${PORT}`))
+const server = app.listen(process.env.PORT || 8000, () => console.log(`server running on PORT ${PORT}`))
 
 module.exports = server;
