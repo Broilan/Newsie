@@ -4,13 +4,13 @@ import NewsCard from '../components/NewsCard'
 import ny from '../assets/ny.png'
 
 
-const Abc = () => {
-  const {foxData, setFoxData} = useContext(DataContext)
+const Nyt = () => {
+  const {nytData, setNytData} = useContext(DataContext)
   const [postsPerPage, setPostsPerPage] = useState(50)
   const [currentRender, setCurrentRender] = useState([])
   
   useEffect(() => {
-    setCurrentRender(foxData.slice(0, postsPerPage))
+    setCurrentRender(nytData.slice(0, postsPerPage))
 
     window.addEventListener('scroll', (e) =>{
       const yAxis = e.target.documentElement.scrollTop
@@ -23,7 +23,7 @@ const Abc = () => {
   
     })
   
-  }, [foxData, postsPerPage])
+  }, [nytData, postsPerPage])
   
 
 
@@ -33,7 +33,7 @@ const Abc = () => {
        <img src={ny} className='h-[45vh] mt-[-4rem] w-[40rem] '></img>
       </div>
       <div className='flex gap-[5rem] ml-[4rem] flex-wrap mt-4'>
-     {currentRender?.map((d) => <NewsCard article={d.article} dateNow={d.dateNow} date={d.date} createdby={d.createdby} eyebrow={d.eyebrow} image={d.image} timePosted={d.timePosted} title={d.title} url={d.url}/>)}
+     {currentRender?.map((d) =>  d.title? <NewsCard article={d.article} dateNow={d.dateNow} date={d.date} createdby={d.createdby} eyebrow={d.eyebrow} image={d.image} timePosted={d.timePosted} title={d.title} url={d.url}/>: null )}
       </div>
   
   
@@ -42,4 +42,4 @@ const Abc = () => {
   )
 }
 
-export default Abc
+export default Nyt

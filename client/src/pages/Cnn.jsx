@@ -5,12 +5,12 @@ import cnn from '../assets/cnn.png'
 
 
 const Cnn = () => {
-  const {foxData, setFoxData} = useContext(DataContext)
+  const {cnnData, setCnnData} = useContext(DataContext)
   const [postsPerPage, setPostsPerPage] = useState(50)
   const [currentRender, setCurrentRender] = useState([])
   
   useEffect(() => {
-    setCurrentRender(foxData.slice(0, postsPerPage))
+    setCurrentRender(cnnData.slice(0, postsPerPage))
 
     window.addEventListener('scroll', (e) =>{
       const yAxis = e.target.documentElement.scrollTop
@@ -23,7 +23,7 @@ const Cnn = () => {
   
     })
   
-  }, [foxData, postsPerPage])
+  }, [cnnData, postsPerPage])
   
 
 

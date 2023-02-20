@@ -43,56 +43,56 @@ app.get('/', function (req, res) {
 })
 
 //intervals
-    setInterval( async () => {
-    // Fox calls
-     await axios.post(`http://localhost:8000/fox/us`)
-     await axios.post(`http://localhost:8000/fox/politics`)
-     await axios.post(`http://localhost:8000/fox/media`)
-     await axios.post(`http://localhost:8000/fox/opinion`)
-     await axios.post(`http://localhost:8000/fox/business`)
-     await axios.post(`http://localhost:8000/fox/entertainment`)
-     await axios.post(`http://localhost:8000/fox/sports`)
-     await axios.post(`http://localhost:8000/fox/lifestyle`)
-     await axios.post(`http://localhost:8000/fox/tv`)
-     await axios.post(`http://localhost:8000/fox/foxnation`)
+//     setInterval( async () => {
+//     // Fox calls
+//      await axios.post(`http://localhost:8000/fox/us`)
+//      await axios.post(`http://localhost:8000/fox/politics`)
+//      await axios.post(`http://localhost:8000/fox/media`)
+//      await axios.post(`http://localhost:8000/fox/opinion`)
+//      await axios.post(`http://localhost:8000/fox/business`)
+//      await axios.post(`http://localhost:8000/fox/entertainment`)
+//      await axios.post(`http://localhost:8000/fox/sports`)
+//      await axios.post(`http://localhost:8000/fox/lifestyle`)
+//      await axios.post(`http://localhost:8000/fox/tv`)
+//      await axios.post(`http://localhost:8000/fox/foxnation`)
 
-    //  CNN calls
-     await axios.post(`http://localhost:8000/cnn/energynenvrironment`)
-     await axios.post(`http://localhost:8000/cnn/spacenscience`)
-     await axios.post(`http://localhost:8000/cnn/americas`)
-     await axios.post(`http://localhost:8000/cnn/tech`)
+//     //  CNN calls
+//      await axios.post(`http://localhost:8000/cnn/energynenvrironment`)
+//      await axios.post(`http://localhost:8000/cnn/spacenscience`)
+//      await axios.post(`http://localhost:8000/cnn/americas`)
+//      await axios.post(`http://localhost:8000/cnn/tech`)
 
-    // NYT Calls 
-     await axios.post(`http://localhost:8000/nyt/us`)
-     await axios.post(`http://localhost:8000/nyt/science`)
-     await axios.post(`http://localhost:8000/nyt/politics`)
-     await axios.post(`http://localhost:8000/nyt/travel`)
-     await axios.post(`http://localhost:8000/nyt/books`)
+//     // NYT Calls 
+//      await axios.post(`http://localhost:8000/nyt/us`)
+//      await axios.post(`http://localhost:8000/nyt/science`)
+//      await axios.post(`http://localhost:8000/nyt/politics`)
+//      await axios.post(`http://localhost:8000/nyt/travel`)
+//      await axios.post(`http://localhost:8000/nyt/books`)
 
-    // TG calls 
-     await axios.post(`http://localhost:8000/tg/us`)
-     await axios.post(`http://localhost:8000/tg/tech`)
-     await axios.post(`http://localhost:8000/tg/env`)
-     await axios.post(`http://localhost:8000/tg/politics`)
-     await axios.post(`http://localhost:8000/tg/health`)
+//     // TG calls 
+//      await axios.post(`http://localhost:8000/tg/us`)
+//      await axios.post(`http://localhost:8000/tg/tech`)
+//      await axios.post(`http://localhost:8000/tg/env`)
+//      await axios.post(`http://localhost:8000/tg/politics`)
+//      await axios.post(`http://localhost:8000/tg/health`)
 
-    // Times Calls 
-     await axios.post(`http://localhost:8000/times/us`)
-     await axios.post(`http://localhost:8000/times/politics`)
-     await axios.post(`http://localhost:8000/times/climate`)
-     await axios.post(`http://localhost:8000/times/tech`)
-     await axios.post(`http://localhost:8000/times/science`)
+//     // Times Calls 
+//      await axios.post(`http://localhost:8000/times/us`)
+//      await axios.post(`http://localhost:8000/times/politics`)
+//      await axios.post(`http://localhost:8000/times/climate`)
+//      await axios.post(`http://localhost:8000/times/tech`)
+//      await axios.post(`http://localhost:8000/times/science`)
 
-    // Vox Calls    
-     await axios.post(`http://localhost:8000/vox/main`)
-     await axios.post(`http://localhost:8000/vox/tech`)
-     await axios.post(`http://localhost:8000/vox/climate`)
-     await axios.post(`http://localhost:8000/vox/health`)
-     await axios.post(`http://localhost:8000/vox/culture`)
-     await axios.post(`http://localhost:8000/vox/science`)
+//     // Vox Calls    
+//      await axios.post(`http://localhost:8000/vox/main`)
+//      await axios.post(`http://localhost:8000/vox/tech`)
+//      await axios.post(`http://localhost:8000/vox/climate`)
+//      await axios.post(`http://localhost:8000/vox/health`)
+//      await axios.post(`http://localhost:8000/vox/culture`)
+//      await axios.post(`http://localhost:8000/vox/science`)
 
 
-  }, 1800000);
+//   }, 1800000);
 
 
 

@@ -1,7 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import newsitewhite from '../assets/newisewhite.png'
-import abcwhite from '../assets/abcwhite.png'
+import newsieexcl from '../assets/newsieexcl.png'
 import cnnwhite from '../assets/cnnwhite.png'
 import foxwhite from '../assets/foxwhite.png'
 import nytimewhite from '../assets/nytimewhite.png'
@@ -12,8 +11,7 @@ import voxwhite from '../assets/voxwhite.png'
 const Navbar = () => {
   return (
     <div className=' fixed flex gap-10  w-screen bg-primary h-16 text-white'>
-        <NavLink to='/' className='relative top-[-3.7rem]'><img src={newsitewhite} alt="newsie logo" className='w-48 h-48'/></NavLink>
-        <NavLink to='/abc'><img src={abcwhite} className="w-20 h-20"></img></NavLink>
+        <NavLink to='/' className='relative top-[-3.7rem]'><img src={newsieexcl} alt="newsie logo" className='w-48 h-48'/></NavLink>
         <NavLink to='/cnn'><img src={cnnwhite} className="w-20 h-20"></img></NavLink>
         <NavLink to='/fox'><img src={foxwhite} className="w-20 h-20"></img></NavLink>
         <NavLink to='/tg'><img src={tgwhite} className="w-20 h-20"></img ></NavLink>

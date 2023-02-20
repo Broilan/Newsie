@@ -20,7 +20,7 @@ const foxnationURL = "https://www.foxnews.com/shows/fox-nation"
 
 
 router.get('/', (req, res) => {
-    Article.find({createdby: "Fox News"})
+    Article.find({createdby: "Fox"})
     .then(response => {
         res.json({response: response})
     })

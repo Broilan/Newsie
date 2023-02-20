@@ -5,12 +5,12 @@ import time from '../assets/time.png'
 
 
 const Times = () => {
-  const {foxData, setFoxData} = useContext(DataContext)
+  const {timesData, setTimesData} = useContext(DataContext)
   const [postsPerPage, setPostsPerPage] = useState(50)
   const [currentRender, setCurrentRender] = useState([])
   
   useEffect(() => {
-    setCurrentRender(foxData.slice(0, postsPerPage))
+    setCurrentRender(timesData.slice(0, postsPerPage))
 
     window.addEventListener('scroll', (e) =>{
       const yAxis = e.target.documentElement.scrollTop
@@ -23,7 +23,7 @@ const Times = () => {
   
     })
   
-  }, [foxData, postsPerPage])
+  }, [timesData, postsPerPage])
   
 
 
