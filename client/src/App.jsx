@@ -19,34 +19,34 @@ function App() {
   
 
 useEffect(() => {
-  axios.get(`http://localhost:8000/fox`)
+  axios.get(`https://newsie.herokuapp.com/fox`)
   .then(response => {
     setFoxData(response.data.response.reverse())
   })
-  axios.get(`http://localhost:8000/cnn`)
+  axios.get(`https://newsie.herokuapp.com/cnn`)
   .then(response => {
     setCnnData(response.data.response.reverse())
   })
-  axios.get(`http://localhost:8000/nyt`)
+  axios.get(`https://newsie.herokuapp.com/nyt`)
   .then(response => {
     setNytData(response.data.response.reverse())
   })
-  axios.get(`http://localhost:8000/tg`)
+  axios.get(`https://newsie.herokuapp.com/tg`)
   .then(response => {
     setTgData(response.data.response.reverse())
   })
-  axios.get(`http://localhost:8000/times`)
+  axios.get(`https://newsie.herokuapp.com/times`)
   .then(response => {
     setTimesData(response.data.response.reverse())
   })
-  axios.get(`http://localhost:8000/vox`)
+  axios.get(`https://newsie.herokuapp.com/vox`)
   .then(response => {
     setVoxData(response.data.response.reverse())
   })
 }, [])
 
 useEffect(() => {
-  axios.get(`http://localhost:8000`)
+  axios.get(`https://newsie.herokuapp.com/home`)
   .then(response => {
     setAllArticles(response.data.allArticles.reverse())
   })
