@@ -49,18 +49,6 @@ app.get('/home', function (req, res) {
 
 //intervals
     setInterval( async () => {
-    // Fox calls
-     await axios.post(`http://localhost:8000/fox/us`)
-     await axios.post(`http://localhost:8000/fox/politics`)
-     await axios.post(`http://localhost:8000/fox/media`)
-     await axios.post(`http://localhost:8000/fox/opinion`)
-     await axios.post(`http://localhost:8000/fox/business`)
-     await axios.post(`http://localhost:8000/fox/entertainment`)
-     await axios.post(`http://localhost:8000/fox/sports`)
-     await axios.post(`http://localhost:8000/fox/lifestyle`)
-     await axios.post(`http://localhost:8000/fox/tv`)
-     await axios.post(`http://localhost:8000/fox/foxnation`)
-
     //  CNN calls
      await axios.post(`http://localhost:8000/cnn/energynenvrironment`)
      await axios.post(`http://localhost:8000/cnn/spacenscience`)
@@ -96,7 +84,17 @@ app.get('/home', function (req, res) {
      await axios.post(`http://localhost:8000/vox/culture`)
      await axios.post(`http://localhost:8000/vox/science`)
 
-
+    // Fox calls
+     await axios.post(`http://localhost:8000/fox/us`)
+     await axios.post(`http://localhost:8000/fox/politics`)
+     await axios.post(`http://localhost:8000/fox/media`)
+     await axios.post(`http://localhost:8000/fox/opinion`)
+     await axios.post(`http://localhost:8000/fox/business`)
+     await axios.post(`http://localhost:8000/fox/entertainment`)
+     await axios.post(`http://localhost:8000/fox/sports`)
+     await axios.post(`http://localhost:8000/fox/lifestyle`)
+     await axios.post(`http://localhost:8000/fox/tv`)
+     await axios.post(`http://localhost:8000/fox/foxnation`)
   }, 1800000);
 
 
