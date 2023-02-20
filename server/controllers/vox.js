@@ -41,9 +41,6 @@ const cheerio = require('cheerio')
                     eyebrow: "Misc",
                     createdby: "Vox",
                 })
-                .then(response => {
-                    console.log(response)
-                })
             })
         res.json(articles)
         }).catch(err => console.log(err))
@@ -74,9 +71,6 @@ router.post('/tech', (req, res) => {
                     eyebrow: "Tech",
                     createdby: "Vox",
                 })
-                .then(response => {
-                    console.log(response)
-                })
             })
         res.json(articles)
         }).catch(err => console.log(err))
@@ -105,9 +99,6 @@ router.post('/climate', (req, res) => {
                     url: a.url,
                     eyebrow: "Climate",
                     createdby: "Vox",
-                })
-                .then(response => {
-                    console.log(response)
                 })
             })
         res.json(articles)
@@ -138,9 +129,6 @@ router.post('/health', (req, res) => {
                     eyebrow: "Health",
                     createdby: "Vox",
                 })
-                .then(response => {
-                    console.log(response)
-                })
             })
         res.json(articles)
         }).catch(err => console.log(err))
@@ -170,9 +158,6 @@ router.post('/culture', (req, res) => {
                     eyebrow: "Culture",
                     createdby: "Vox",
                 })
-                .then(response => {
-                    console.log(response)
-                })
             })
         res.json(articles)
         }).catch(err => console.log(err))
@@ -201,9 +186,6 @@ router.post('/science', (req, res) => {
                     url: a.url,
                     eyebrow: "Science",
                     createdby: "Vox",
-                })
-                .then(response => {
-                    console.log(response)
                 })
             })
         res.json(articles)

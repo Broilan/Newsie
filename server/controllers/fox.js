@@ -61,9 +61,6 @@ router.post('/us', (req, res) => {
                     image: a.image,
                     createdby: "Fox",
                 })
-                .then(response => {
-                    console.log(response)
-                })
             })
         res.json(articles)
         }).catch(err => console.log(err))

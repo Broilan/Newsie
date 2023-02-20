@@ -42,9 +42,6 @@ router.post('/energynenvrironment', (req, res) => {
                     eyebrow: "Energy",
                     createdby: "CNN",
                 })
-                .then(response => {
-                    console.log(response)
-                })
             })
         res.json(articles)
         }).catch(err => console.log(err))
@@ -76,9 +73,6 @@ router.post('/spacenscience', (req, res) => {
                     image: a.image,
                     eyebrow: "Science",
                     createdby: "CNN",
-                })
-                .then(response => {
-                    console.log(response)
                 })
             })
         res.json(articles)
@@ -112,9 +106,6 @@ router.post('/americas', (req, res) => {
                     eyebrow: "Americas",
                     createdby: "CNN",
                 })
-                .then(response => {
-                    console.log(response)
-                })
             })
         res.json(articles)
         }).catch(err => console.log(err))
@@ -146,9 +137,6 @@ router.post('/tech', (req, res) => {
                     image: a.image,
                     eyebrow: "Tech",
                     createdby: "CNN",
-                })
-                .then(response => {
-                    console.log(response)
                 })
             })
         res.json(articles)

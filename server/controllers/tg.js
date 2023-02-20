@@ -43,9 +43,6 @@ const cheerio = require('cheerio')
                     eyebrow: "US",
                     createdby: "The Guardian",
                 })
-                .then(response => {
-                    console.log(response)
-                })
             })
         res.json(articles)
         }).catch(err => console.log(err))
@@ -77,9 +74,6 @@ router.post('/tech', (req, res) => {
                     image: a.image,
                     eyebrow: "Tech",
                     createdby: "The Guardian",
-                })
-                .then(response => {
-                    console.log(response)
                 })
             })
         res.json(articles)
@@ -113,9 +107,6 @@ router.post('/env', (req, res) => {
                     eyebrow: "Environment",
                     createdby: "The Guardian",
                 })
-                .then(response => {
-                    console.log(response)
-                })
             })
         res.json(articles)
         }).catch(err => console.log(err))
@@ -148,9 +139,6 @@ router.post('/politics', (req, res) => {
                     eyebrow: "Politics",
                     createdby: "The Guardian",
                 })
-                .then(response => {
-                    console.log(response)
-                })
             })
         res.json(articles)
         }).catch(err => console.log(err))
@@ -182,9 +170,6 @@ router.post('/health', (req, res) => {
                     image: a.image,
                     eyebrow: "Health",
                     createdby: "The Guardian",
-                })
-                .then(response => {
-                    console.log(response)
                 })
             })
         res.json(articles)
