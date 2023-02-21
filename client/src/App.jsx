@@ -49,7 +49,7 @@ useEffect(() => {
 useEffect(() => {
   axios.get(`https://newsie.herokuapp.com/home`)
   .then(response => {
-    setAllArticles(response.data.allArticles)
+    setAllArticles(response.data.allArticles.reverse())
   })
 }, [])
 
