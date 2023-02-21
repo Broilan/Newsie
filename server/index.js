@@ -53,42 +53,42 @@ app.get('/home', function (req, res) {
      await axios.post(`https://newsie.herokuapp.com/cnn/energynenvrironment`)
      await axios.post(`https://newsie.herokuapp.com/cnn/spacenscience`)
      await axios.post(`https://newsie.herokuapp.com/cnn/tech`)
- }, 300000 );
+ }, 1800000);
 
     setInterval( async () => {
     // NYT Calls 
      await axios.post(`https://newsie.herokuapp.com/nyt/us`)
      await axios.post(`https://newsie.herokuapp.com/nyt/science`)
      await axios.post(`https://newsie.herokuapp.com/nyt/politics`)
-    }, 600000);
+    }, 2100000);
 
     setInterval( async () => {
     // TG calls 
      await axios.post(`https://newsie.herokuapp.com/tg/tech`)
      await axios.post(`https://newsie.herokuapp.com/tg/env`)
      await axios.post(`https://newsie.herokuapp.com/tg/politics`)
-    }, 900000);
+    }, 2400000);
 
     setInterval( async () => {
     // Times Calls 
      await axios.post(`https://newsie.herokuapp.com/times/climate`)
      await axios.post(`https://newsie.herokuapp.com/times/tech`)
      await axios.post(`https://newsie.herokuapp.com/times/science`)
-    }, 12000000);
+    }, 2700000);
 
     setInterval( async () => {
     // Vox Calls    
      await axios.post(`https://newsie.herokuapp.com/vox/main`)
      await axios.post(`https://newsie.herokuapp.com/vox/climate`)
      await axios.post(`https://newsie.herokuapp.com/vox/science`)
-    }, 15000000);
+    }, 3000000);
 
     setInterval( async () => {
      // Fox calls
      await axios.post(`https://newsie.herokuapp.com/fox/politics`)
      await axios.post(`https://newsie.herokuapp.com/fox/media`)
      await axios.post(`https://newsie.herokuapp.com/fox/entertainment`)
-    }, 18000000);
+    }, 3300000);
 
 
 
