@@ -1,4 +1,5 @@
-import React, {useState, useContext, useEffect} from 'react'
+import React, {useContext, useRef, useEffect} from 'react'
+import axios from "axios"
 import { DataContext } from '../App'
 import NewsCard from '../components/NewsCard'
 import ny from '../assets/ny.png'
@@ -7,24 +8,23 @@ import ny from '../assets/ny.png'
 
 const Nyt = () => {
   const {nytData, setNytData} = useContext(DataContext)
-  const [postsPerPage, setPostsPerPage] = useState(50)
-  const [currentRender, setCurrentRender] = useState([])
+  const numRef = useRef(100)
   
   useEffect(() => {
-    setCurrentRender(nytData.slice(0, postsPerPage))
-
     window.addEventListener('scroll', (e) =>{
       const yAxis = e.target.documentElement.scrollTop
       const docHeight = e.target.documentElement.scrollHeight
-      if (yAxis > docHeight - 2000) {
-        setPostsPerPage(postsPerPage + 50)
+      if (yAxis > docHeight - 2000) { 
+        axios.get(`http://localhost:8001/nyt/${numRef.current}`)
+        .then(response => {
+          numRef.current = numRef.current + 50
+          setNytData(response.data.response.reverse())
+        })
       } else {
-        console.log("not there yet")
+        return
       }
-  
     })
-  
-  }, [nytData, postsPerPage])
+  }, [])
   
 
 
@@ -34,7 +34,7 @@ const Nyt = () => {
        <img src={ny} className='h-[45vh] mt-[-4rem] w-[40rem] '></img>
       </div>
       <div className='flex gap-[5rem] ml-[4rem] flex-wrap mt-4'>
-     {currentRender?.map((d) =>  d.title? <NewsCard article={d.article} dateNow={d.dateNow} date={d.date} createdby={d.createdby} eyebrow={d.eyebrow} image={d.image} timePosted={d.timePosted} title={d.title} url={d.url}/>: null )}
+     {nytData?.map((d) =>  d.title? <NewsCard article={d.article} dateNow={d.dateNow} date={d.date} createdby={d.createdby} eyebrow={d.eyebrow} image={d.image} timePosted={d.timePosted} title={d.title} url={d.url}/>: null )}
       </div>
   
   

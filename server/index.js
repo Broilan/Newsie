@@ -94,6 +94,6 @@ app.get('/home/:num', function (req, res) {
 
 
 
-const server = app.listen(8001)
+const server = app.listen(PORT)
 
 module.exports = server;
