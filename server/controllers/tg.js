@@ -10,8 +10,8 @@ const cheerio = require('cheerio')
  const politicsURL = "https://www.theguardian.com/us-news/us-politics"
  const healthURL = "https://www.theguardian.com/lifeandstyle/health-and-wellbeing"
 
- router.get('/', (req, res) => {
-    Article.find({createdby: "The Guardian"})
+ router.get('/:num', (req, res) => {
+    Article.find({createdby: "The Guardian"}).limit(req.params.num)
     .then(response => {
         res.json({response: response})
     })

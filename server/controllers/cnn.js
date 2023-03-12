@@ -9,8 +9,8 @@ const cheerio = require('cheerio')
  const americasURL = "https://www.cnn.com/world/americas"
  const techURL = "https://www.cnn.com/business/tech"
 
- router.get('/', (req, res) => {
-    Article.find({createdby: "CNN"})
+ router.get('/:num', (req, res) => {
+    Article.find({createdby: "CNN"}).limit(req.params.num)
     .then(response => {
         res.json({response: response})
     })

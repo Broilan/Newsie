@@ -39,10 +39,11 @@ app.get('/', (req, res) => {
     res.json({ name: 'MERN Auth API', greeting: 'Welcome to the our API', author: 'YOU', message: "Smile, you are being watched by the Backend Engineering Team" });
   });
 
-app.get('/home', function (req, res) {
-    Article.find({})
+app.get('/home/:num', function (req, res) {
+    Article.find().limit(req.params.num)
     .then(allArticles => {
        res.json({allArticles: allArticles })  
+       console.log(allArticles)
     })
    
 })
@@ -93,6 +94,6 @@ app.get('/home', function (req, res) {
 
 
 
-const server = app.listen(PORT, () => console.log(`server running on PORTx ${PORT}`))
+const server = app.listen(8001)
 
 module.exports = server;

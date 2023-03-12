@@ -11,8 +11,8 @@ const cheerio = require('cheerio')
  const cultureURL = "https://www.vox.com/culture"
  const mainURL = "https://www.vox.com/"
 
- router.get('/', (req, res) => {
-    Article.find({createdby: "Vox"})
+ router.get('/:num', (req, res) => {
+    Article.find({createdby: "Vox"}).limit(req.params.num)
     .then(response => {
         res.json({response: response})
     })

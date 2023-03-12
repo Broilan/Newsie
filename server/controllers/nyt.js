@@ -10,8 +10,8 @@ const cheerio = require('cheerio')
  const travelURL = "https://www.nytimes.com/section/travel"
  const booksURL = "https://www.nytimes.com/section/books"
 
- router.get('/', (req, res) => {
-    Article.find({createdby: "NY Times"})
+ router.get('/:num', (req, res) => {
+    Article.find({createdby: "NY Times"}).limit(req.params.num)
     .then(response => {
         res.json({response: response})
     })
