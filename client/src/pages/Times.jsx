@@ -14,7 +14,7 @@ const Times = () => {
       const yAxis = e.target.documentElement.scrollTop
       const docHeight = e.target.documentElement.scrollHeight
       if (yAxis > docHeight - 2000) { 
-        axios.get(`http://localhost:8001/times/${numRef.current}`)
+        axios.get(`https://newsie.herokuapp.com/times/${numRef.current}`)
         .then(response => {
           numRef.current = numRef.current + 50
           setTimesData(response.data.response.reverse())

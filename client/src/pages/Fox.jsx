@@ -15,7 +15,7 @@ const Fox = () => {
       const yAxis = e.target.documentElement.scrollTop
       const docHeight = e.target.documentElement.scrollHeight
       if (yAxis > docHeight - 2000) { 
-        axios.get(`http://localhost:8001/fox/${numRef.current}`)
+        axios.get(`https://newsie.herokuapp.com/fox/${numRef.current}`)
         .then(response => {
           numRef.current = numRef.current + 50
           setFoxData(response.data.response.reverse())

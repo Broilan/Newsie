@@ -19,31 +19,31 @@ function App() {
   
 
 useEffect(() => {  
-  axios.get(`http://localhost:8001/home/${numRef.current}`)
+  axios.get(`https://newsie.herokuapp.com/home/${numRef.current}`)
   .then(response => {
     setAllArticles(response.data.allArticles.reverse())
   }).catch(err=> {console.log(err)})
-  axios.get(`http://localhost:8001/cnn/${numRef.current}`)
+  axios.get(`https://newsie.herokuapp.com/cnn/${numRef.current}`)
   .then(response => {
     setCnnData(response.data.response.reverse())
   }).catch(err=> {console.log(err)})
-  axios.get(`http://localhost:8001/nyt/${numRef.current}`)
+  axios.get(`https://newsie.herokuapp.com/nyt/${numRef.current}`)
   .then(response => {
     setNytData(response.data.response.reverse())
   }).catch(err=> {console.log(err)})
-  axios.get(`http://localhost:8001/tg/${numRef.current}`)
+  axios.get(`https://newsie.herokuapp.com/tg/${numRef.current}`)
   .then(response => {
     setTgData(response.data.response.reverse())
   }).catch(err=> {console.log(err)})
-  axios.get(`http://localhost:8001/times/${numRef.current}`)
+  axios.get(`https://newsie.herokuapp.com/times/${numRef.current}`)
   .then(response => {
     setTimesData(response.data.response.reverse())
   }).catch(err=> {console.log(err)})
-  axios.get(`http://localhost:8001/vox/${numRef.current}`)
+  axios.get(`https://newsie.herokuapp.com/vox/${numRef.current}`)
   .then(response => {
     setVoxData(response.data.response.reverse())
   }).catch(err=> {console.log(err)})
-  axios.get(`http://localhost:8001/fox/${numRef.current}`)
+  axios.get(`https://newsie.herokuapp.com/fox/${numRef.current}`)
   .then(response => {
     setFoxData(response.data.response.reverse())
   }).catch(err=> {console.log(err)})

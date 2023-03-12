@@ -15,7 +15,7 @@ const Vox = () => {
       const yAxis = e.target.documentElement.scrollTop
       const docHeight = e.target.documentElement.scrollHeight
       if (yAxis > docHeight - 2000) { 
-        axios.get(`http://localhost:8001/vox/${numRef.current}`)
+        axios.get(`https://newsie.herokuapp.com/vox/${numRef.current}`)
         .then(response => {
           numRef.current = numRef.current + 50
           setVoxData(response.data.response.reverse())

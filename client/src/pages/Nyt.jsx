@@ -15,7 +15,7 @@ const Nyt = () => {
       const yAxis = e.target.documentElement.scrollTop
       const docHeight = e.target.documentElement.scrollHeight
       if (yAxis > docHeight - 2000) { 
-        axios.get(`http://localhost:8001/nyt/${numRef.current}`)
+        axios.get(`https://newsie.herokuapp.com/nyt/${numRef.current}`)
         .then(response => {
           numRef.current = numRef.current + 50
           setNytData(response.data.response.reverse())
